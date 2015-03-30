@@ -9,7 +9,6 @@ Clips\Tool is the heart object of the Clips Tool, it behaves as:
 
 ## Class Loading
 
-
 ### [PSR4](http://php-fig.org/psr/psr-4/) Class Loading
 
 Clips\Tool use [PSR4](http://php-fig.org/psr/psr-4/) class loading method by default.
@@ -24,4 +23,3 @@ Clips\Tool extends this by using auto namespace support. Auto namespace support 
 This class loading method will give you the flexiablity of replacing any core class of Clips Tool
 to use your own.
 
-Let's say you want to use Clips\Engine

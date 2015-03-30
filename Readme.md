@@ -52,3 +52,4 @@ framework work on the rest
 15. Master/Detail is powerful and fundamental, please do use it a lot
 16. Keep all the same kind of things together, if possible
 17. Test, code and test again, write as much testcase as possible when needed
+18. Don't reinvent the wheel.
