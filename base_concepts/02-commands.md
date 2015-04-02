@@ -100,4 +100,4 @@ Usage
 
 ## Markup Command
 
-Render the markup
+Render the markup using github flavor.
