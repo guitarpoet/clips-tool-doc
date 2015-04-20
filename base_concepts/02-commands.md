@@ -75,21 +75,21 @@ You can generate lots of codes using generate command(the whole scaffole, for ex
 For scaffolding, see scaffolding.
 
 Usage
-	clips generate widget
-	clips generate model
-	clips generate controller
-	clips generate pagination
-	clips generate form
-	clips generate view
-	clips generate scaffold
-	clips generate bcap
+	clips generate widget # Generate widget for application
+	clips generate model # Generate models for application based on the schema
+	clips generate controller # Generate controllers for application based on the schema
+	clips generate pagination # Generate paginations for application based on the schema
+	clips generate form # Generate forms for application based on the schema
+	clips generate view # Generate views for application based on the schema
+	clips generate scaffold # Generate models, controllers, paginations, forms and views altogether
+	clips generate bcap # Generate the bcap cache file based on the bcap file.
 
 ## Get Command
 
 Get command will retrieve the depenencies that didn't distribute using composer(browser caps for example) to the cache folder to ease the development using Clips Tool.
 
 Usage
-	clips get bcap
+	clips get bcap # Getting the bcap and generate the cache file for get browser meta informations
 
 ## List Command
 
@@ -100,4 +100,26 @@ Usage
 
 ## Markup Command
 
-Render the markup using github flavor.
+Render the markup file using github flavor
+
+Usage
+	clips markup file.md
+
+## MMseg Command - [php-mmseg](https://github.com/guitarpoet/php-mmseg) plugin needed
+
+Manipulating [php-mmseg](https://github.com/guitarpoet/php-mmseg).
+
+Usage
+	clips mmseg dict dict.txt # Generate the dictionary file using the input file dict.txt	
+	clips mmseg syno dict.txt # Generate the synonyms file using the input file dict.txt
+	clips mmseg thes dict.txt # Generate the thesaurus file using the input file dict.txt
+	clips mmseg file.txt # Segment the file
+
+## Peg Command
+
+Creating the PEG support library class using hafriedlander's [PEG parser](https://github.com/hafriedlander/php-peg).
+
+The peg part
+
+Usage
+	clips peg ThePegClass # The peg class must located in the peg_dir(config/pegs by default)
