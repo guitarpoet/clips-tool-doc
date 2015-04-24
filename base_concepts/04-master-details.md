@@ -8,7 +8,7 @@ So, what is a master and details pattern?
 
 Master and Details pattern is a UE(User Experience) pattern. It will use 2 kind of views(master and details) to provide most of the views.
 
-* Master: The master view in most times will provide a [pagination]() enabled view(a table or a listview), it will provide all the functions that a pagination provides
+* Master: The master view in most times will provide a [pagination]({{site_url "base_concepts/05-pagination"}}) enabled view(a table or a listview), it will provide all the functions that a pagination provides
 * Details: The details view in most times is a readonly or editable form
 
 ### Purpose of Master and Details Pattern
