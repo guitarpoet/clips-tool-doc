@@ -6,7 +6,7 @@ The IoC in Clips-Tool means (Inversion of Control).
 
 IoC is a good way to break donw the depenencies of the components of the application.
 
-IoC sometimes can be called Dpendency Injection - [DI](). TODO: Add some wikipedia text here.
+IoC sometimes can be called Dpendency Injection - [DI](http://en.wikipedia.org/wiki/Dependency_injection). In software engineering, dependency injection is a software design pattern that implements inversion of control for software libraries. Caller delegates to an external framework the control flow of discovering and importing a service or software module specified or "injected" by the caller. Dependency injection allows a program design to follow the dependency inversion principle where modules are loosely coupled. With dependency injection, the client which uses a module or service doesn't need to know all its details, and typically the module can be replaced by another one of similar characteristics without altering the client.
 
 There are many frameworks that implememnts the IoC, such as [SprintFramework](http://www.springframework.org) and [Guice]() in Java.
 
@@ -32,9 +32,9 @@ There are 3 benefits to use Clips Tool to create the object for you than new it:
 
 Let's see the power of Clips Tool's IoC support.
 
-### Auto Logger Support([PSR-3]())
+### Auto Logger Support([PSR-3](http://php-fig.org/psr/psr-3/))
 
-Clips Tool support [PSR-3]() - the logging standard use IoC.
+Clips Tool support [PSR-3](http://php-fig.org/psr/psr-3/) - the logging standard use IoC.
 
 If you want to use a logger in your component, just let your Class implements the Psr\Log\LoggerAwareInterface.
 

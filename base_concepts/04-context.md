@@ -36,4 +36,4 @@ And use this value:
 
 ## Future of Context
 
-Clips\Tool will provide another tree context(something like [LDAP](TODO)), and it will use TreeNode api to get and query for data.
+Clips\Tool will provide another tree context(something like [LDAP](http://en.wikipedia.org/wiki/Lightweight_Directory_Access_Protocol)), and it will use TreeNode api to get and query for data.
