@@ -19,6 +19,25 @@ DataTable Widget is very fundamental widget in [Master Details Pattern]({{siteur
 		"date": "Wed Feb 18 16:52:03 2015",
 		"version": "1.0",
 		"name": "DataTable",
+desc substance_data;
++------------------+---------------+------+-----+---------+-------+
+| Field            | Type          | Null | Key | Default | Extra |
++------------------+---------------+------+-----+---------+-------+
+| id               | bigint(20)    | NO   | PRI | NULL    |       |
+| smiles           | longtext      | YES  |     | NULL    |       |
+| bond_annotations | text          | YES  |     | NULL    |       |
+| coordinate_type  | varchar(16)   | YES  |     | NULL    |       |
+| datasource_name  | varchar(255)  | YES  | MUL | NULL    |       |
+| datasource_regid | varchar(16)   | YES  |     | NULL    |       |
+| datasource_url   | varchar(1024) | YES  |     | NULL    |       |
+| substance_url    | varchar(1024) | YES  |     | NULL    |       |
+| cas              | varchar(32)   | YES  | MUL | NULL    |       |
+| nonstandard_bond | varchar(1024) | YES  |     | NULL    |       |
+| pubmed_id        | varchar(32)   | YES  |     | NULL    |       |
+| comment          | longtext      | YES  |     | NULL    |       |
+| snynonym         | text          | YES  |     | NULL    |       |
+| total_charge     | varchar(16)   | YES  |     | NULL    |       |
++------------------+---------------+------+-----+---------+-------+
 		"doc":"The datatable widget.",
 		"depends": ["Jquery", "JQueryUICommon", "StoreJS"],
 		"js": {
@@ -45,4 +64,28 @@ You can see the dependenciese of it, and see what files it provides
 
 ## Dependency Management of Widgets
 
-As you can see in the above example, all widgets in Clips Tool may have its dependency. 
+As you can see in the above example, all widgets in Clips Tool may have its dependency, when you require this widget as depenency, the depenency widgets of this widget(and their dependencies too) will be load an initialized for you too. And, don't worry, Clips Tool will only load and initialize the widget once, so, even all of your widgets require jquery, jquery widget will get initialize once.
+
+The depenency management for widgets in Clips Tool 1.0 is that simple, in 1.1 version of Clips Tool, I'll add more complex depenency management to Clips Tool.
+
+## How to write your own widget
+
+Since Clips Tool is extendable by the heart, so, what to do if you want to write your own widget?
+
+You can use this wizzard to aid you:
+
+	./vender/bin/clips generate widget
+
+And, walk through this wizzard, you'll create a bootstrap for your widget.
+
+The folder structure of a widget is soemthing like this:
+
+* widget.json: The configuration file for this widget
+* Widget.php: The initialize class for this widget
+* js: The folder to put your JavaScript files
+* scss: The folder to put your SASS files
+* css: The folder to put your CSS files
+* smarty: The folder to put your Smarty plugins
+* mustache: The folder to put your mustache particials
+
+What you need to do, is add the files that you want to put, and then change the configuration of your widget.

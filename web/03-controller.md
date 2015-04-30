@@ -233,6 +233,31 @@ You can use the filter to handle every phase of the request processing:
 
 There won't be any filter_render method call here, since that will be called in the render engine(mostly filters).
 
+## The Filters in Clips Tool
+
+There are a few filters in Clips Tool(they can be located at namespace Clips\Filters), let me explain them to you:
+
+* CssFilter: This filter will trigger at any request's filter after phase, will put all the css file in the context's css value to a link reference
+* DirectViewFilter: This filter will provide the direct view render engine
+* FormFilter: This filter will filter all the form request(default to post, if you want to filter get request as well, set Clips\Form annotations's get attribute to true), using the rule you defined in form configuration to validate the form request
+* JsFilter(@deprecated): This filter will generate the Script tags using Context's js value, this is desprated for version 1.0, since there is a better way to do this by using smarty plugin js.
+* MustacheViewFilter: This filter will provide the mustache view render engine
+* RulesFilter: This filter will trigger the rules filter, it will initialize the rule engine using your rules at filter before phase, and it'll run the rule engine at the filter after phase, so that, if your request is a rule based one, you'll need write quite little code
+* ScssFilter: This filter will using SassCompiler to compile all the value in Context's scss value to 1 scss_file, and add it to Context's css value
+* SmartyViewFilter: This filter will provde the smarty render engine
+
+### The order of filters
+
+As you can see, filter can generate the input of other filter(by using [context]({{siteurl "base_concepts/context"}})), so, if you put the wrong order of filters, you may got the wrong answer.
+
+### Write You Own Filter
+
+You can write your own filter, and that's quite easy:
+
+1. Make your filter class extends Clips\AbstractFilter(if your filter is a view filter, extends AbstractViewFilter)
+2. Override the function filter_before, filter_after or filter_render
+3. Configure your filter to Clips Tool using configuration file
+
 ## The Views
 
 In Clips Tool's controller, you can render the output using these ways:
